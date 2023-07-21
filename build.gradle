@@ -1,0 +1,27 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.0.4'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'io.reginaldlaw'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+//	compile "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.2"
+//	compile "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2"
+//	compile "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.2"
+   implementation 'org.apache.commons:commons-lang3:3.0'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
