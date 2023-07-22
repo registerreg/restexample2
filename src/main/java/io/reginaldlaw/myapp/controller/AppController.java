@@ -50,15 +50,7 @@ public class AppController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                     .body(errorMessage);
         }
-
-        // Check if the required parameters are present
-        if (employeeBean.getFirstName() == null ||
-            employeeBean.getLastName() == null ||
-            employeeBean.getSupervisor() == null) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                    .body("Required parameters are missing");
-        }
-        
+ 
         System.out.println("FirstName : " + employeeBean.getFirstName());
         System.out.println("LastName : " +  employeeBean.getLastName());
         System.out.println("email : " + employeeBean.getEmail());
